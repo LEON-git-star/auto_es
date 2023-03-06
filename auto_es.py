@@ -27,12 +27,12 @@ def main():
         futures = [executor.submit(extract_secrets(f)) for f in f_list]
 
 if __name__ == '__main__':
-    # 処理前の時刻
+    # Time before processing
     t1 = time.time()    
     main()
-    # 処理後の時刻
+    # Time after processing
     t2 = time.time()
     
-    # 経過時間を表示
+    # Diplay elapsed time
     elapsed_time = t2-t1
     print(f"Elapsed time: {elapsed_time}")
